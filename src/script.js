@@ -22,7 +22,7 @@ function displayMovie(response) {
 
 function search(movie) {
   let apiId = `30ea62ca`;
-  let apiEndpoint = `http://www.omdbapi.com/?`;
+  let apiEndpoint = `https://www.omdbapi.com/?`;
   let apiUrl = `${apiEndpoint}apikey=${apiId}&t=${movie}`;
   axios.get(apiUrl).then(displayMovie);
 }
