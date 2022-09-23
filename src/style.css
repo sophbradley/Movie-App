@@ -1,1 +1,48 @@
+body {
+  background: linear-gradient(
+    359.3deg,
+    rgb(196, 214, 252) 1%,
+    rgba(187, 187, 187, 0) 70.9%
+  );
+}
 
+.container {
+  font-family: "Raleway", sans-serif;
+  color: rgb(76, 79, 82);
+}
+
+.search {
+  margin-top: 30px;
+}
+
+.search-bar {
+  padding: 6px 12px;
+  border: 1px solid rgb(255, 193, 7);
+  border-radius: 6px;
+  margin-top: 2px;
+}
+
+.submit-btn {
+  color: #fff;
+  margin-bottom: 1px;
+}
+
+.movieTitle {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 36px;
+}
+
+.moviePoster {
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.movieInfo {
+  margin-top: 20px;
+}
+
+.category {
+  font-weight: bold;
+}

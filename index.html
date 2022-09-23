@@ -10,45 +10,58 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="src/style.css" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Movie app</title>
   </head>
   <div class="container">
     <body>
-      <p>Search for a movie</p>
-      <form class="search" id="search-form">
+      <form class="search form-label" id="search-form">
         <input
           type="text"
           placeholder="search for a movie"
           autocomplete="off"
           id="movie-name"
+          class="search-bar"
         />
-        <input type="submit" value="Search" id="submit-btn" />
+        <input type="submit" value="Search" id="submit-btn" class="submit-btn btn btn-warning" />
       </form>
-      <p id="movie-title">The Mummy</p>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/6/68/The_mummy.jpg?20170611170046"
-        id="poster"
-      />
-      <p>Year: <span id="release-year">1999</span></p>
-      <p>Rated: <span id="rating">PG-13</span></p>
-      <p>Released: <span id="release-date">07 May 1999</span></p>
-      <p>Runtime: <span id="runtime">124 min</span></p>
-      <p>Genre: <span id="genre">Action, Adventure, Fantasy</span></p>
-      <p>
-        Actors:
-        <span id="actors">Brendan Fraser, Rachel Weisz, John Hannah</span>
-      </p>
-      <p>
-        Plot:
-        <span id="plot"
-          >At an archaeological dig in the ancient city of Hamunaptra, an
-          American serving in the French Foreign Legion accidentally awakens a
-          mummy who begins to wreak havoc as he searches for the reincarnation
-          of his long-lost love.</span
-        >
-      </p>
+      <div class="row">
+        <div class="col-12">
+          <p class="movieTitle" id="movie-title"></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <img
+            class="moviePoster"
+            src="#"
+            id="poster"
+            alt="movie poster"
+          />
+          </div>
+
+          <div class="col-6 movieInfo">
+            <p><span class="category">Year:</span> <span id="release-year"></span></p>
+            <p><span class="category">Rated:</span> <span id="rating"></span></p>
+            <p><span class="category">Released:</span> <span id="release-date"></span></p>
+            <p><span class="category">Runtime:</span> <span id="runtime"></span></p>
+            <p><span class="category">Genre:</span> <span id="genre"></span></p>
+            <p><span class="category">
+              Actors:</span>
+              <span id="actors"></span>
+            </p>
+            <p><span class="category">
+              Plot:</span>
+              <span id="plot"></span>
+            </p>
+          </div>
+        </div>
+      </div>
       <script src="src/script.js"></script>
     </body>
   </div>

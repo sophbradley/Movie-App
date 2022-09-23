@@ -7,7 +7,7 @@ function displayMovie(response) {
   let genre = document.querySelector("#genre");
   let actors = document.querySelector("#actors");
   let plot = document.querySelector("#plot");
-  // let movieImage = document.querySelector("#poster");
+  let movieImage = document.querySelector("#poster");
 
   movieTitle.innerHTML = response.data.Title;
   releaseYear.innerHTML = response.data.Year;
@@ -17,27 +17,23 @@ function displayMovie(response) {
   genre.innerHTML = response.data.Genre;
   actors.innerHTML = response.data.Actors;
   plot.innerHTML = response.data.Plot;
-  //posterUrl = response.data.Poster;
-  //console.log(posterUrl);
-  // movieImage.setAttribute("href", response.data.Poster);
+  movieImage.setAttribute("src", `${response.data.Poster}`);
 }
 
 function search(movie) {
   let apiId = `30ea62ca`;
   let apiEndpoint = `http://www.omdbapi.com/?`;
-  let movieName = document.querySelector("#movie-name").value;
-  var formattedMovie = movieName.replace(/ /g, "+");
-  let apiUrl = `${apiEndpoint}apikey=${apiId}&t=${formattedMovie}`;
+  let apiUrl = `${apiEndpoint}apikey=${apiId}&t=${movie}`;
   axios.get(apiUrl).then(displayMovie);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
-  let movie = document.querySelector("#movie-name");
-  search(movie.value);
+  let movieInput = document.querySelector("#movie-name");
+  search(movieInput.value);
 }
 
-let searchMovie = document.querySelector("#search-form");
-searchMovie.addEventListener("click", handleSubmit);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
-//search("The Mummy");
+search("The Mummy");
