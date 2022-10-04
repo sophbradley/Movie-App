@@ -9,6 +9,13 @@ body {
   background-attachment: fixed;
 }
 
+footer {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  margin-top: 20px;
+  color: rgb(76, 79, 82);
+}
+
 .container {
   font-family: "Raleway", sans-serif;
   color: rgb(76, 79, 82);
