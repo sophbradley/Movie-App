@@ -10,9 +10,12 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
     <link href="src/style.css" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Movie app</title>
@@ -27,7 +30,12 @@
           id="movie-name"
           class="search-bar"
         />
-        <input type="submit" value="Search" id="submit-btn" class="submit-btn btn btn-warning" />
+        <input
+          type="submit"
+          value="Search"
+          id="submit-btn"
+          class="submit-btn btn btn-warning"
+        />
       </form>
       <div class="row">
         <div class="col-12">
@@ -35,35 +43,44 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-6">
+      <div class="row searchReturn">
+        <div class="col-md-6">
           <img
-            class="moviePoster"
+            class="img-fluid moviePoster"
             src="#"
             id="poster"
             alt="movie poster"
           />
-          </div>
+        </div>
 
-          <div class="col-6 movieInfo">
-            <p><span class="category">Year:</span> <span id="release-year"></span></p>
-            <p><span class="category">Rated:</span> <span id="rating"></span></p>
-            <p><span class="category">Released:</span> <span id="release-date"></span></p>
-            <p><span class="category">Runtime:</span> <span id="runtime"></span></p>
-            <p><span class="category">Genre:</span> <span id="genre"></span></p>
-            <p><span class="category">
-              Actors:</span>
-              <span id="actors"></span>
-            </p>
-            <p><span class="category">
-              Plot:</span>
-              <span id="plot"></span>
-            </p>
-          </div>
+        <div class="col-md-6 movieInfo">
+          <p>
+            <span class="category">Year:</span> <span id="release-year"></span>
+          </p>
+          <p><span class="category">Rated:</span> <span id="rating"></span></p>
+          <p>
+            <span class="category">Released:</span>
+            <span id="release-date"></span>
+          </p>
+          <p>
+            <span class="category">Runtime:</span> <span id="runtime"></span>
+          </p>
+          <p><span class="category">Genre:</span> <span id="genre"></span></p>
+          <p>
+            <span class="category"> Actors:</span>
+            <span id="actors"></span>
+          </p>
+          <p>
+            <span class="category"> Plot:</span>
+            <span id="plot"></span>
+          </p>
         </div>
       </div>
-      <footer>
-        <a href="https://github.com/sophbradley/Movie-App" target="_blank">Open source code</a> by Sophie Bradley
+      <footer class="mt-5 mb-3">
+        <a href="https://github.com/sophbradley/Movie-App" target="_blank"
+          >Open source code</a
+        >
+        by Sophie Bradley
       </footer>
       <script src="src/script.js"></script>
     </body>
